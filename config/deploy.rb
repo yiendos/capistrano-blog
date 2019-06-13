@@ -5,8 +5,8 @@ set :keep_releases, 5
 set :log_level, (ENV['LOG_LEVEL'] || :info)
 set :pty, false
 
-#set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
-#set :composer_working_dir, -> { fetch(:release_path) }
+set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
+set :composer_working_dir, -> { fetch(:release_path) }
 
 namespace :deploy do
     before :finishing,  'database:migrate'
