@@ -11,5 +11,6 @@ set :composer_working_dir, -> { fetch(:release_path) }
 namespace :deploy do
     before :finishing,  'database:migrate'
     before :finishing_rollback, 'database:migrate'
+    after  :deploy,     'thatsallfolks:symlink'
     after  :deploy,     'thatsallfolks:finish'
 end

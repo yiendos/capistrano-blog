@@ -1,29 +1,12 @@
 namespace :thatsallfolks do
-  jumper = %{
-                /|         ,
-              ,///        /|
-             // //     ,///
-            // //     // //
-           // //     || ||
-           || ||    // //
-           || ||   // //
-           || ||  // //
-           || || || ||
-           \\,\|,|\_//
-            \\)\)\\|/
-            )-."" .-(
-           //^\` `/^\\              THAT'S ALL FOLKS!!!!
-          //  |   |  \\
-        ,/_| 0| _ | 0|_\,
-      /`    `"=.v.="`    `\
-     /`    _."{_,_}"._    `\
-     `/`  ` \  |||  / `  `\`
-      `",_  \\=^~^=//  _,"`
-          "=,\'-=-'/,="
-              '---'
-}.strip!
+
+  task :symlink do
+    on roles(:app) do
+        execute "ln -sfn /var/www/html/capistrano/current/code/index.html /var/www/html/index.html"
+    end
+  end
 
   task :finish do
-      warn(jumper.green)
+      warn(File.read(File.join(File.dirname(__FILE__), 'ascii')));
   end
 end
