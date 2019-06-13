@@ -1,0 +1,5 @@
+{
+    "require": {
+        "joomlatools/console": "^1.5"
+    }
+}
