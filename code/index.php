@@ -10,10 +10,10 @@ $users = $model->actionFetch();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Staging</title>
+    <title>Production</title>
 </head>
 <body>
-<h1>Staging</h1>
+<h1>Production</h1>
 
 <ul>
     <?php foreach ($users AS $user) : ?>
