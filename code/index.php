@@ -21,6 +21,11 @@ $users = $model->actionFetch();
         <li><?php echo $user['name'] ?></li>
 
     <?php endforeach ?>
+
+    <?php if (!count($users)): ?>
+
+        <li>There are currently no users</li>
+    <?php endif ?>
 </ul>
 </body>
 </html>
