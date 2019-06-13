@@ -1,5 +1,6 @@
 {
     "require": {
-        "joomlatools/console": "^1.5"
+        "joomlatools/console": "^1.5",
+        "robmorgan/phinx": "^0.10.7"
     }
 }
