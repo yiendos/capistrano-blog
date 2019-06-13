@@ -2,7 +2,7 @@ namespace :thatsallfolks do
 
   task :symlink do
     on roles(:app) do
-        execute "ln -sfn /var/www/html/capistrano/current/code/index.html /var/www/html/index.html"
+        execute "ln -sfn /home/deploy/capistrano/current/code/index.html /var/www/html/index.html"
     end
   end
 
