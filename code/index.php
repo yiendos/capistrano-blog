@@ -18,7 +18,7 @@ $users = $model->actionFetch();
 <ul>
     <?php foreach ($users AS $user) : ?>
 
-        <li><?php echo $user['name'] ?></li>
+        <li><?php echo $user['name'] ?>: <?php echo $user['notes'] ?></li>
 
     <?php endforeach ?>
 
