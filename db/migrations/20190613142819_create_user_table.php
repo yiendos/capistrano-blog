@@ -9,8 +9,6 @@ class CreateUserTable extends AbstractMigration
 
         $sql = <<<EOT
         
-DROP TABLE IF EXISTS `j_users` ; 
-        
 CREATE TABLE `j_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
