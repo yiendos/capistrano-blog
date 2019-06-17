@@ -1,5 +1,5 @@
 set :application, 'capistrano-blog'
-set :repo_url, 'git@github.com:yiendos/capistrano-blog.git'
+set :repo_url, 'https://github.com/yiendos/capistrano-blog.git'
 set :keep_releases, 5
 
 set :log_level, (ENV['LOG_LEVEL'] || :info)

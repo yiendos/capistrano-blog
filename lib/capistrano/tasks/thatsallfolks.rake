@@ -3,7 +3,7 @@ namespace :thatsallfolks do
   task :symlink do
     on roles(:app) do
         execute "mkdir -p  /var/www/#{ fetch(:application) }"
-        execute "ln -sfn /home/vagrant/capistrano/current/code/index.html /var/www/#{ fetch(:application) }"
+        execute "ln -sfn /home/vagrant/capistrano/current/code/index.php /var/www/#{ fetch(:application) }"
     end
   end
 
