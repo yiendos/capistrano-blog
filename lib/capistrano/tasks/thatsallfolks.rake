@@ -4,6 +4,7 @@ namespace :thatsallfolks do
     on roles(:app) do
         execute "mkdir -p  /var/www/#{ fetch(:application) }"
         execute "ln -sfn /home/vagrant/capistrano/current/code/index.php /var/www/#{ fetch(:application) }"
+        execute "php /home/vagrant/box/box apc:disable"
     end
   end
 
